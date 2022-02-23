@@ -2,6 +2,7 @@ import React from 'react'
 import css from './navigation.module.css'
 import img from '../../images/download.png'
 import Cart from '../Cart'
+import { Link } from 'react-router-dom'
 
 function Navigation() {
   return (
