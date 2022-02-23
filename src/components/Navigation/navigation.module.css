@@ -1,0 +1,56 @@
+.container {
+  font-family: 'Permanent Marker';
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 50px 0 black;
+  align-items: center;
+  padding: 8px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.logo img {
+  height: 70px;
+  width: 70px;
+}
+.logo p {
+  font-size: 27px;
+}
+.logo:hover {
+  color: orange;
+  transition: 0.2s;
+  animation: bump 500ms ease-out;
+}
+.options {
+  display: flex;
+}
+.options li{
+  list-style-type: none;
+  font-size: 30px;
+  margin-right: 40px;
+}
+.options li:hover {
+  animation: bump 300ms ease-out;
+  color: orange;
+  transition: 0.2s;
+}
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
