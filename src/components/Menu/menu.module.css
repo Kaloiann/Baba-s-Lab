@@ -15,9 +15,34 @@
   margin: auto;
   margin-top: 30px;
 }
+
 .container li {
   border-style: solid;
   padding: 50px;
   border-radius: 20px;
   box-shadow: 0 0 50px 0 blue;
+}
+.container img {
+  height: 250px;
+  width: 250px;
+}
+.mix {
+  display: flex;
+}
+.mix p {
+  max-width: 300px;
+  margin-left: 30px;
+  text-align: center;
+  border-style: solid;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 black;
+  
+}
+.mix2 {
+  display: flex;
+  margin-right: 50px;
+}
+.price {
+  margin: auto;
+  font-size: 35px;
 }

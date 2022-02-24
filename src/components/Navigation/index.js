@@ -7,17 +7,21 @@ import { Link } from 'react-router-dom'
 function Navigation() {
   return (
     <div className={css.container}>
-      <div className={css.logo}>
-        <img src={img} alt="Granny Icon" />
-        <p>Baba's Lab</p>
+      <Link className={css.link} to='/'>
+        <div className={css.logo}>
+          <img src={img} alt="Granny Icon" />
+          <p>
+            Baba's Lab
+          </p> 
+        </div>
+      </Link>
+      <div className={css.options}>
+          <Link to='/menu'>Menu</Link>
+          <Link to='/#'>Special</Link>
+          <Link to='/#'>Places</Link>
+          <Link to='/#'>Often Orders</Link>
+          <Link to='/#'>For Baba</Link>
       </div>
-      <ul className={css.options}>
-        <li>Menu</li>
-        <li>Special</li>
-        <li>Places</li>
-        <li>Often Orders</li>
-        <li>For Baba</li>
-      </ul>
       <Cart />
     </div>
   )

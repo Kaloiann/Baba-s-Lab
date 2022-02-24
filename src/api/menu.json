@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Meat Ball",
       "price": "0.50",
-      "image": "/images/meat.png",
+      "image": "./src./images/download.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {

@@ -7,17 +7,25 @@
   align-items: center;
   padding: 8px;
 }
+.link {
+  text-decoration: none;
+}
 .logo {
   display: flex;
-  align-items: center;
   padding-left: 10px;
+  align-items: center;
 }
 .logo img {
   height: 70px;
   width: 70px;
 }
-.logo p {
+.logo p{
   font-size: 27px;
+  padding-left: 5px;
+  color: black; 
+}
+.logo p:hover {
+  color: orange;
 }
 .logo:hover {
   color: orange;
@@ -27,16 +35,19 @@
 .options {
   display: flex;
 }
-.options li{
+.options a{
   list-style-type: none;
   font-size: 30px;
   margin-right: 40px;
+  color: black;
+  text-decoration: none;
 }
-.options li:hover {
+.options a:hover {
   animation: bump 300ms ease-out;
   color: orange;
   transition: 0.2s;
 }
+
 @keyframes bump {
   0% {
     transform: scale(1);

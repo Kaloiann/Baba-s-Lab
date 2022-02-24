@@ -1,0 +1,36 @@
+.container {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.container input {
+  width: 30px;
+  height: 25px;
+  font-size: 15px;
+  margin-right: 10px;
+  text-align: center;
+}
+.container p {
+  margin-right: 10px;
+  padding-left: 10px;
+}
+.container button {
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  border-radius: 50%;
+  color: white;
+}
+.red {
+  background-color: rgb(202, 9, 9);
+}
+.green {
+  background-color: blue;
+}
+.red:hover {
+  box-shadow: 0 0 10px 0 red;
+}
+.green:hover {
+  box-shadow: 0 0 10px 0 blue;
+}

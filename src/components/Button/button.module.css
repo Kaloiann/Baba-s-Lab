@@ -1,0 +1,15 @@
+.container button {
+  height: 60px;
+  width: 120px;
+  border-radius: 25px;
+  background-color: rgb(209, 137, 2);
+  color: white;
+  font-size: 20px; 
+  box-shadow: 0 0 5px 0 black;
+  margin-left: 40px;
+  cursor: pointer;
+  border-color: rgb(209, 137, 2);
+}
+.container button:hover {
+  box-shadow: 0 0 15px 0 black;
+}
