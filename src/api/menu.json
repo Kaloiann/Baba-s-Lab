@@ -1,74 +1,121 @@
 {
   "Menu":[
     {
+      "category": "Meat",
+      "subcategory": "Pork",
       "id": 1,
       "title": "Meat Ball",
       "price": "0.50",
-      "image": "./src./images/download.png",
+      "image": "/images/meat.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {
+      "category": "Main Dish",
+      "subcategory": "Without Meat",
       "id": 2,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
-      "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
+      "title": "Sicilian Spaghetti",
+      "price": "10.50",
+      "image": "/images/12.png",
+      "shortDescription": "Spaghetti is a long, thin, solid, cylindrical pasta. It is a staple food of traditional Italian cuisine. Like other pasta, spaghetti is made of milled wheat and water and sometimes enriched with vitamins and minerals. Italian spaghetti is typically made from durum wheat semolina."
     },
     {
+      "category": "Soup",
+      "subcategory": "Veggi",
       "id": 3,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
-      "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
+      "title": "Cream Soup",
+      "price": "4.50",
+      "image": "/images/1.jfif",
+      "shortDescription": "Soup is a primarily liquid food, generally served warm or hot, that is made by combining ingredients of meat or vegetables with stock, milk, or water. Hot soups are additionally characterized by boiling solid ingredients in liquids in a pot until the flavors are extracted, forming a broth."
     },
     {
+      "category": "Main Dish",
+      "subcategory": "Without Meat",
       "id": 4,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
+      "title": "Roast Potatos",
+      "price": "4.00",
+      "image": "/images/2.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {
+      "category": "Dessert",
+      "subcategory": "Icecream",
       "id": 5,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
+      "title": "Chocolate Icecream",
+      "price": "3.50",
+      "image": "/images/3.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {
+      "category": "Meat",
+      "subcategory": "Beef",
       "id": 6,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
+      "title": "Steak",
+      "price": "15.90",
+      "image": "/images/4.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {
+      "category": "Salad",
+      "subcategory": "Vegetarian",
       "id": 7,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
+      "title": "Spring Salad",
+      "price": "5.50",
+      "image": "/images/5.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {
+      "category": "Salad",
+      "subcategory": "Non-Vegetarian",
       "id": 8,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
+      "title": "Calamari Salad",
+      "price": "7.50",
+      "image": "/images/6.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {
+      "category": "Salad",
+      "subcategory": "Vegetarian",
       "id": 9,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
+      "title": "Hearty Vegetable Salad",
+      "price": "6.50",
+      "image": "/images/7.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
     },
     {
+      "category": "Salad",
+      "subcategory": "Non-Vegetarian",
       "id": 10,
-      "title": "Meat Ball",
-      "price": "0.50",
-      "image": "/images/download.png",
+      "title": "Tuna Salad",
+      "price": "5.70",
+      "image": "/images/8.png",
       "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
+    },
+    {
+      "category": "Meat",
+      "subcategory": "Fish",
+      "id": 11,
+      "title": "Grilled Salmon",
+      "price": "15.70",
+      "image": "/images/9.png",
+      "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
+    },
+    {
+      "category": "Meat",
+      "subcategory": "Chiken",
+      "id": 12,
+      "title": "Quick Chicken Piccata",
+      "price": "12.30",
+      "image": "/images/10.png",
+      "shortDescription": "A meatball is ground meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning."
+    },
+    {
+      "category": "Drinks",
+      "subcategory": "Alkohol-Free",
+      "id": 13,
+      "title": "Coca Cola",
+      "price": "1.30",
+      "image": "/images/11.png",
+      "shortDescription": "500ml"
     }
   ]
 }

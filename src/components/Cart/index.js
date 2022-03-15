@@ -1,16 +1,35 @@
-import React from 'react'
-import CartIcon from './CartIcon'
+import React, { useContext, useState } from 'react'
+import MenuRender from '../Menu/MenuRender'
+import CartContext from '../store/cart-context'
 import css from './cart.module.css'
+import data from '../../api/menu.json'
 
 function Cart() {
+  const [order, setOrder] = useState(false)
+  const cartCtx = useContext(CartContext)
+  const { meals } = cartCtx
+
+  const hasMeals = Object.values(meals).find(val => val > 0)
+
+  const orderHandler = (id) => {
+    setOrder(true)
+    cartCtx.removeMeal(id)
+  }
+  
+  const mealsIds = Object.keys(meals)
+  const renderMeals = data.Menu.filter(meal => mealsIds.find(id => id == meal.id)) || []
+  const totalPrice = mealsIds.length ? mealsIds.map(id => parseFloat(renderMeals.find(meal => meal.id == id).price) * meals[id])?.reduce((a, b) => a + b) : 0
+
   return (
     <div className={css.container}>
-      <p>
-        Your Cart
-      </p>
-      <CartIcon />
+        <h1 className={css.h1}>Your Cart :</h1>
+        <MenuRender renderMeals={renderMeals} />
+        <div className={css.amount}>
+          <p>Price: ${totalPrice.toFixed(2)}</p>
+          {hasMeals && <button onClick={orderHandler} className={css.button}>Order</button>}
+          {order && hasMeals && <p style={{color: "green", fontSize: "40px"}}>Your order is recived !</p> }
+        </div>
     </div>
-
   )
 }
 

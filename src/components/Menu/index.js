@@ -1,32 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import css from './menu.module.css'
-import data from '../../api/menu.json'
-import Button from '../Button'
 import Input from '../Input'
-import img from '../../images/meat.png'
 
 
-function Menu() {
+function Menu({ data }) {
   return (
     <div className={css.container}>
-      {data.Menu.map(product =>
-        <ul key={product.id}>
+      {data?.map(meal =>
+        <ul key={meal.id}>
           <li>
-            <h1>{product.title}</h1>
+            <h1>{meal.title}</h1>
             <div className={css.mix}>
-              <img src={img} alt='Meat ball'/>
-              <p>{product.shortDescription}</p>
+              <img src={meal.image} alt={meal.title}/>
+              <p>{meal.shortDescription}</p>
             </div>
             <div className={css.mix2}>
-             <p className={css.price}>${product.price}</p>
+             <p className={css.price}>${meal.price}</p>
               <div>
-                <Input />
-                <Button />
+                <Input {...meal} />
               </div>
             </div>
           </li>
         </ul>
-        )}
+      )}
     </div>
   )
 }

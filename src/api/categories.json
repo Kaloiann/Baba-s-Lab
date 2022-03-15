@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "name": "Meat",
+      "subcategories": [
+        "Fish",
+        "Pork",
+        "Beef",
+        "Chiken"
+      ]
+    },
+    {
+      "name": "Drinks",
+      "subcategories": [
+        "Alkohol-Free"
+      ]
+    },
+    {
+      "name": "Salad",
+      "subcategories": [
+        "Vegetarian",
+        "Non-Vegetarian"
+      ]
+    },
+    {
+      "name": "Soup",
+      "subcategories": [
+        "Veggi"
+      ]
+    },
+    {
+      "name": "Main Dish",
+      "subcategories": [
+        "Without Meat"
+      ]
+    },
+    {
+      "name": "Dessert",
+      "subcategories": [
+        "Icecream"
+      ]
+    }
+  ]
+}

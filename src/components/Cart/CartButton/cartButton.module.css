@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+}
+.text {
+  font-size: 22px;
+  font-family: 'Permanent Marker';
+  margin-left: 10px;
+}
+.badge {
+  background-color: orange;
+  padding: 0.25rem 1rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+}
+.container:hover {
+  color: orange;
+  transition: 0.4s;
+  background-color: rgb(60, 60, 158);
+}
+@media only screen and (max-width: 1224px) {
+  .text {
+    font-size: 14px;
+  }
+  .badge {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .container {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    padding: 5px;
+    border: none;
+    background: white;
+  }
+  .container:hover {
+    background: none;
+  }
+  .text {
+    display: none;
+  }
+  .badge {
+    position: absolute;
+    font-size: 12px;
+    bottom: 25px;
+    right: 5px;
+    height: 10px;
+    padding: 7px 8px;
+    border-radius: 50%;
+  }
+}
+
