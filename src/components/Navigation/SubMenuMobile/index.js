@@ -6,7 +6,7 @@ import css from './subMenuMobile.module.css'
 
 export const SubMenuMobile = () => {
   const [activeCategory, setActiveCategory] = useState(null)
-  const [hideCategorie, setHideCategories] = useState(false)
+  const [hideCategories, setHideCategories] = useState(false)
 
   const hideCategoriesHandler = (i) => {
     setHideCategories(true)
@@ -75,8 +75,8 @@ export const SubMenuMobile = () => {
   return (
     <div className={css['main-category']}>
       <ul className={css.categories}>
-      {hideCategorie && <button onClick={showCategoriesHandler}>Back</button> }
-      {!hideCategorie && categories.categories?.map((cat, i) =>
+      {hideCategories && <button onClick={showCategoriesHandler}>Back</button> }
+      {!hideCategories && categories.categories?.map((cat, i) =>
         <Link to={`/meals/category/${cat.name}`} key={`cateogry_${i}`}
           onClick={() => hideCategoriesHandler(i)} 
         >
@@ -85,7 +85,7 @@ export const SubMenuMobile = () => {
       )}
       </ul>
       <div>
-        {hideCategorie && <ul className={css.subcategories}>
+        {hideCategories && <ul className={css.subcategories}>
           {categories.categories[activeCategory]?.subcategories.map((subCat, i) => (
             <Link to={`/meals/subcategory/${subCat}`} key={`sub_category_${i}`}>{subCat}</Link>
             ))}
