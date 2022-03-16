@@ -11,12 +11,12 @@
 }
 .subcategories {
   font-family: 'Poppins';
-  font-size: 15px;
   text-align: start;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
 }
+
 @media only screen and (max-width: 960px) {
   .main-category {
     width: 100%;
@@ -28,5 +28,8 @@
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+  }
+  .subcategories {
+    font-size: 25px;
   }
 }
