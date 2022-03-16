@@ -1,5 +1,5 @@
 import React, { useContext, useReducer } from 'react'
-import CartContext from '../store/cart-context'
+import { CartContext } from '../../store/CartProvider'
 import css from './input.module.css'
 
 

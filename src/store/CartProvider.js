@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react'
-import CartContext from './cart-context';
 
 const minAmount = (amount) => amount <= 0 ? 0 : amount
 
@@ -13,7 +12,6 @@ const Reducer = (state, action) => {
           [action.meal.id]: (state.meals[action.meal.id] || 0) + action.meal.amount
         }
       };
-
     case 'remove':
       return {
         amount: minAmount(state.amount - 1),
@@ -21,6 +19,12 @@ const Reducer = (state, action) => {
           ...state.meals,
           [action.id]: minAmount((state.meals[action.id] - 1))
         }
+      }
+    case 'remove-all':
+      return {
+        ...state,
+        amount: state.amount === 0,
+        meals: {}
       }
   }
   return initalState
@@ -30,6 +34,9 @@ const initalState = {
   meals: {},
   amount: 0,
 }
+
+export const CartContext = React.createContext(initalState)
+
 function CartProvider(data) {
   const [state, dispatch] = useReducer(Reducer, initalState)
 
@@ -39,12 +46,16 @@ function CartProvider(data) {
   const removeMealHandler = (id) => {
     dispatch({ type: 'remove', id: id })
   }
+  const removeAllMealsHandler = (id) => {
+    dispatch({ type: 'remove-all', id: id })
+  }
 
   const cartContext = {
     meals: state.meals,
     amount: state.amount,
     addMeal: addMealHandler,
-    removeMeal: removeMealHandler
+    removeMeal: removeMealHandler,
+    removeAllMeals: removeAllMealsHandler
   };
 
   return (

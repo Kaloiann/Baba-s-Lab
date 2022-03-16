@@ -1,13 +1,8 @@
-import React, { useContext } from 'react'
-import CartContext from '../../store/cart-context'
+import React from 'react'
 import CartIcon from '../CartIcon'
 import css from './cartButton.module.css'
 
-function CartButton() {
-  const cartCtx = useContext(CartContext)
-
-  const { amount } = cartCtx
-
+function CartButton({ amount }) {
   return (
     <button className={css.container}>
       <CartIcon />

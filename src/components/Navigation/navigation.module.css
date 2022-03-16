@@ -51,25 +51,6 @@
   animation: bump 200ms ease-out;
   color: orange;
 }
-.main-category {
-  width: 900px;
-  border-color: black;
-  border-radius: 10px;
-  background: rgb(192, 190, 190);
-  box-shadow: 0 0 10px 0 black;
-  text-align: center;
-}
-.main-category ul {
-  padding: 0;
-}
-.subcategories {
-  font-family: 'Poppins';
-  font-size: 15px;
-  text-align: start;
-  padding: 0 30px;
-  display: flex;
-  flex-direction: column;
-}
 .show {
   position: relative;
 }

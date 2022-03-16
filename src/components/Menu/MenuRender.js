@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import CartContext from '../store/cart-context'
+import { CartContext } from '../../store/CartProvider'
 import css from './menuRender.module.css'
 
 function MenuRender({ renderMeals }) {

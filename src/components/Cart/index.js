@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import MenuRender from '../Menu/MenuRender'
-import CartContext from '../store/cart-context'
+import { CartContext } from '../../store/CartProvider'
 import css from './cart.module.css'
 import data from '../../api/menu.json'
 
@@ -13,7 +13,7 @@ function Cart() {
 
   const orderHandler = (id) => {
     setOrder(true)
-    cartCtx.removeMeal(id)
+    cartCtx.removeAllMeals(id)
   }
   
   const mealsIds = Object.keys(meals)
@@ -25,9 +25,9 @@ function Cart() {
         <h1 className={css.h1}>Your Cart :</h1>
         <MenuRender renderMeals={renderMeals} />
         <div className={css.amount}>
-          <p>Price: ${totalPrice.toFixed(2)}</p>
+          <p className={css.price}>Price: ${totalPrice.toFixed(2)}</p>
           {hasMeals && <button onClick={orderHandler} className={css.button}>Order</button>}
-          {order && hasMeals && <p style={{color: "green", fontSize: "40px"}}>Your order is recived !</p> }
+          {order && <p className={css.order} >Your order is recived !</p> }
         </div>
     </div>
   )

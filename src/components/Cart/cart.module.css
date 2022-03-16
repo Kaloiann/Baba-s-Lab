@@ -17,9 +17,6 @@
   font-family: 'Permanent Marker';
   cursor: pointer;
 }
-.amount p {
-  font-size: 30px;
-}
 .button:hover {
   transition: 0.2s;
   background-color: blue;
@@ -28,6 +25,13 @@
 }
 .h1 {
   margin-top: 40px; 
+}
+.price {
+  font-size: 30px;
+}
+.order {
+  font-size: 40px;
+  color: green;
 }
 @media screen and (max-width: 1350px) {
   .container {
@@ -46,7 +50,7 @@
     font-size: 15px;
     margin-top: 0;
   }
-  .container p {
+  .container p:first-child{
     font-size: 15px;
   }
   .button {
@@ -54,5 +58,8 @@
     width: 70px;
     height: 35px;
     margin-bottom: 0;
+  }
+  .order {
+    font-size: 20px;
   }
 }
