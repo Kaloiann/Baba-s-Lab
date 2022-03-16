@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import SubMenu from '../SubMenu'
+import SubMenuMobile from '../SubMenuMobile'
 import css from './mobile.module.css'
 
 const Mobile = () => {
@@ -12,7 +12,7 @@ const Mobile = () => {
           <div onClick={() => setShowCategory(!showCategory)}>Menu</div>
           <div>
             {showCategory ?
-              <SubMenu />
+              <SubMenuMobile />
             : null}  
           </div>  
         </div>

@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import categories from '../../../api/categories.json'
 
-import css from './subMenu.module.css'
+import css from './subMenuMobile.module.css'
 
-export const SubMenu = () => {
+export const SubMenuMobile = () => {
   const [activeCategory, setActiveCategory] = useState(null)
 
   // - decomposition
@@ -86,4 +86,4 @@ export const SubMenu = () => {
   ) 
 }
 
-export default SubMenu
+export default SubMenuMobile
