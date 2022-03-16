@@ -1,0 +1,29 @@
+.main-category {
+  width: 900px;
+  border-color: black;
+  border-radius: 10px;
+  background: rgb(192, 190, 190);
+  box-shadow: 0 0 10px 0 black;
+  text-align: center;
+}
+.main-category ul {
+  padding: 10px 30px;
+  margin: 0;
+}
+.subcategories {
+  font-family: 'Poppins';
+  font-size: 20px;
+  text-align: start;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 960px) {
+  .main-category {
+    width: 100%;
+  }
+  .categories {
+    display: flex;
+    flex-direction: column;
+  }
+}

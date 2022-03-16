@@ -6,6 +6,15 @@ import css from './subMenuMobile.module.css'
 
 export const SubMenuMobile = () => {
   const [activeCategory, setActiveCategory] = useState(null)
+  const [hideCategorie, setHideCategories] = useState(false)
+
+  const hideCategoriesHandler = (i) => {
+    setHideCategories(true)
+    setActiveCategory(i)
+  }
+  const showCategoriesHandler = () => {
+    setHideCategories(false)
+  }
 
   // - decomposition
   // - composition
@@ -66,21 +75,21 @@ export const SubMenuMobile = () => {
   return (
     <div className={css['main-category']}>
       <ul className={css.categories}>
-      {categories.categories?.map((item, i) =>
-        <Link to={`/meals/category/${item.name}`} key={`cateogry_${i}`}
-          onMouseEnter={() => setActiveCategory(i)}
-          // onClick
+      {hideCategorie && <button onClick={showCategoriesHandler}>Back</button> }
+      {!hideCategorie && categories.categories?.map((cat, i) =>
+        <Link to={`/meals/category/${cat.name}`} key={`cateogry_${i}`}
+          onClick={() => hideCategoriesHandler(i)} 
         >
-          {item.name}
+          {cat.name}
         </Link>
       )}
       </ul>
       <div>
-        <ul className={css.subcategories}>
-          {categories.categories[activeCategory]?.subcategories.map((cat, i) => (
-            <Link to={`/meals/subcategory/${cat}`} key={`sub_category_${i}`}>{cat}</Link>
+        {hideCategorie && <ul className={css.subcategories}>
+          {categories.categories[activeCategory]?.subcategories.map((subCat, i) => (
+            <Link to={`/meals/subcategory/${subCat}`} key={`sub_category_${i}`}>{subCat}</Link>
             ))}
-        </ul>
+        </ul>}
       </div>
     </div>
   ) 
