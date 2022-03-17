@@ -23,7 +23,7 @@ const Reducer = (state, action) => {
     case 'remove-all':
       return {
         ...state,
-        amount: state.amount === 0,
+        amount: 0,
         meals: {}
       }
   }

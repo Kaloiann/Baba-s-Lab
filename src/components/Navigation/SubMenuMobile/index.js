@@ -1,12 +1,26 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useHistory   } from 'react-router-dom'
 import categories from '../../../api/categories.json'
 
-import css from './subMenu.module.css'
+import css from './subMenuMobile.module.css'
 
-export const SubMenu = () => {
+export const SubMenuMobile = ({ setShowMenu }) => {
   const [activeCategory, setActiveCategory] = useState(null)
+  const [hideCategories, setHideCategories] = useState(false)
+  const history = useHistory();
 
+  const hideCategoriesHandler = (i) => {
+    setHideCategories(true)
+    setActiveCategory(i)
+  }
+  const showCategoriesHandler = () => {
+    setHideCategories(false)
+  }
+  const redirectHandler = (subCat) => {
+    setShowMenu(false)
+    history.push(`/meals/subcategory/${subCat}`)
+  }
   // - decomposition
   // - composition
 
@@ -66,24 +80,24 @@ export const SubMenu = () => {
   return (
     <div className={css['main-category']}>
       <ul className={css.categories}>
-      {categories.categories?.map((item, i) =>
-        <Link to={`/meals/category/${item.name}`} key={`cateogry_${i}`}
-          onMouseEnter={() => setActiveCategory(i)}
-          // onClick
+      {hideCategories && <button onClick={showCategoriesHandler}>Back</button> }
+      {!hideCategories && categories.categories?.map((cat, i) =>
+        <div to={`/meals/category/${cat.name}`} key={`cateogry_${i}`}
+          onClick={() => hideCategoriesHandler(i)} 
         >
-          {item.name}
-        </Link>
+          {cat.name}
+        </div>
       )}
       </ul>
       <div>
-        <ul className={css.subcategories}>
-          {categories.categories[activeCategory]?.subcategories.map((cat, i) => (
-            <Link to={`/meals/subcategory/${cat}`} key={`sub_category_${i}`}>{cat}</Link>
+        {hideCategories && <ul className={css.subcategories}>
+          {categories.categories[activeCategory]?.subcategories.map((subCat, i) => (
+            <div onClick={() => redirectHandler(subCat)} key={`sub_category_${i}`}>{subCat}</div>
             ))}
-        </ul>
+        </ul>}
       </div>
     </div>
   ) 
 }
 
-export default SubMenu
+export default SubMenuMobile

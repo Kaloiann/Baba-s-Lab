@@ -1,0 +1,29 @@
+.container {
+  margin: auto;
+  margin-top: 300px;
+  margin-bottom: 100px;
+  background-color: white;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px 0 red;
+}
+.container p {
+  font-size: 25px;
+}
+.container h1 {
+  font-size: 40px;
+}
+@media screen and (max-width: 960px) {
+  .container p{
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .container {
+    margin: 200px 30px;
+  }
+  .container h1 {
+    font-size: 30px;
+  }
+}

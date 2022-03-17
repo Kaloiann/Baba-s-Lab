@@ -15,11 +15,11 @@ function Navigation() {
   const [showMenu, setShowMenu] = useState(false)
 
   const cartCtx = useContext(CartContext)
-  // debugger
+
 
   const { amount } = cartCtx
 
-  const MobileMenu = <>
+   const MobileMenu = <>
     <div className={css.container}>
       <Link className={css.link} to='/'>
         <div className={css.logo}>
@@ -34,7 +34,7 @@ function Navigation() {
       <AiOutlineClose className={css['close-menu']} onClick={() => setShowMenu(false)}/>}
       </div>
       <div className={css['mobile-navigation']}>
-        {showMenu &&  <Mobile />}
+        {showMenu &&  <Mobile setShowMenu={setShowMenu} />}
       </div>
       <Link to='/cart'>
         <CartButton amount={amount} />
@@ -65,10 +65,8 @@ function Navigation() {
               : null}  
             </div>  
           </div>
-          {/* <Link to='/#'>Special</Link> */}
-          <Link to='/#'>Places</Link>
-          {/* <Link to='/#'>Often Orders</Link> */}
-          <Link to='/#'>For Baba</Link>
+          <Link to='/places'>Places</Link>
+          <Link to='/info'>For Baba</Link>
       </div>
       <Link to='/cart'>
         <CartButton amount={amount} />

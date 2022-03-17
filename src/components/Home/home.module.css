@@ -8,14 +8,12 @@
   background-color: white;
   padding: 40px;
   border-radius: 25px;
-  box-shadow: 0 0 100px 0 blue;
+  box-shadow: 0 0 15px 0 blue;
 }
 @media screen and (max-width: 960px) {
   .container {
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 100px;
-    margin-top: 200px;
+    margin: 250px 30px;
+    padding: 30px;
   }
   .container h1 {
     font-size: 25px;
