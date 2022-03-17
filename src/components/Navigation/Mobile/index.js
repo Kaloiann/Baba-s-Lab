@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom'
 import SubMenuMobile from '../SubMenuMobile'
 import css from './mobile.module.css'
 
-const Mobile = () => {
+const Mobile = ({ setShowMenu }) => {
   const [showCategory, setShowCategory] = useState(false)
+
+  const hideNavHandler = () => {
+    setShowMenu(false)
+  }
 
   return (
     <div className={css.container}>
@@ -12,14 +16,12 @@ const Mobile = () => {
           <div onClick={() => setShowCategory(!showCategory)}>Menu</div>
           <div>
             {showCategory ?
-              <SubMenuMobile />
+              <SubMenuMobile setShowMenu={setShowMenu} />
             : null}  
           </div>  
         </div>
-        {/* <Link to='/#'>Special</Link> */}
-        <Link to='/#'>Places</Link>
-        {/* <Link to='/#'>Often Orders</Link> */}
-        <Link to='/#'>For Baba</Link>
+        <Link onClick={hideNavHandler} to='/places'>Places</Link>
+        <Link onClick={hideNavHandler} to='/info'>For Baba</Link>
     </div>
   )
 }

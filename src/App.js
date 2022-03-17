@@ -7,6 +7,8 @@ import MealsListing from "./components/MealsListing";
 import CartProvider from "./store/CartProvider";
 import data from "./api/menu.json"
 import Footer from "./components/Footer";
+import Places from "./components/Places";
+import ForBaba from "./components/ForBaba";
 
 
 
@@ -19,6 +21,12 @@ function App() {
             <Switch>
               <Route exact path='/'>
                 <Home />
+              </Route>
+              <Route path='/places'>
+                <Places />
+              </Route>
+              <Route path='/info'>
+                <ForBaba />
               </Route>
               <Route path='/cart'>
                 <Cart />
